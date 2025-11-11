@@ -1,5 +1,15 @@
 # Zehnder Comfoair Q350 MQTT bridge
 
+## NOTE : as of 2025-11-11, switched over to another project to monitor and interact with my Zehnder Comfoair Q350, as the other project builds on ESPHome and hence has lots of improvements:
+* Based on ESPHome, so handling the ESP32 is so much better
+* Very easy customization if at all needed
+* It has the same sensors as this project (and more) plus many "action" added to easily control features such as bypass and fan speeds
+* It comes with a pre-built Home Assistant "Ventilation Card" ready to be used, which looks very cool compared with a long list of individual sensor states / values
+
+Project may be found here :
+[Zehnder Comfoair Q ESPHome](https://github.com/yoziru/esphome-zehnder-comfoair.git)
+
+
 This software lets you use a ESP32 + CAN transceiver (and accesory components, total budget well under 20 € in parts) to interact with the Zehnder Comfoair Q350 (and probably any other Q-series) Mechanical Ventilation with Heat Recovery (MVHR) unit. Zehnder has an official hardware bridge called "Comfoconnect LAN C" which is not only dead expensive (over 250 €), but lacks most of the features this project provides.
 
 Firmware running off the ESP32 does expose all known Zehnder Comfoair Q series metrics and status information through MQTT, and lets you control the air flow (and run other actions) via MQTT as well.
